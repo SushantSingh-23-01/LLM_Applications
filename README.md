@@ -16,7 +16,7 @@ Steps:
 - **Map Step**: Large Text is splitted into small text which fits within context window of LLM and then further summarized by it.
 - **Reduce Step**: Collect summaries of chunks from map step and refine them into a single summary using LLM.
 
-
+![Map Reduce Summarization.jpg](https://github.com/SushantSingh-23-01/LLM_Applications/blob/8d6065c85998eec24a58bc81cb9a1403873c4fa6/assets/Map_Reduce_summarization.jpg)
 
 Parameters Suggestion:
 - Temperature: 0.1 - 0.5
