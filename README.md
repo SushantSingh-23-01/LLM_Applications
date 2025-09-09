@@ -10,7 +10,13 @@ All the applications invovle detailed debugging information displayed in termina
 
 ### Document Summarization
 
-Implements Map Reduce Summarization Technique.
+Implements Map Reduce Summarization Technique. 
+
+Steps: 
+- **Map Step**: Large Text is splitted into small text which fits within context window of LLM and then further summarized by it.
+- **Reduce Step**: Collect summaries of chunks from map step and refine them into a single summary using LLM.
+
+
 
 Parameters Suggestion:
 - Temperature: 0.1 - 0.5
