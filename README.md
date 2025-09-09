@@ -7,6 +7,10 @@ This is a repository aimed at implementing various applications of LLMs. The lis
 
 All the applications invovle detailed debugging information displayed in terminal for easy tuning.
 
+### Retrieval Augmented Generation
+#### Parent Child Ingestion
+- Parent chunk ingestion is an advanced strategy for handling documents that creates a **hierarchical relationship between chunks of different sizes**.
+- This method aims to resolve the tension between having chunks that are **small enough** for **precise embedding** and **large enough** to retain the **necessary context**.
 
 ### Document Summarization
 
