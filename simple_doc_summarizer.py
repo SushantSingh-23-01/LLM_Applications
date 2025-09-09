@@ -10,7 +10,6 @@ from text_splitters import sentence_aware_splitter
 class Config:
     def __init__(self) -> None:
         self.chat_model = r'gemma3:4b'
-        self.emb_model = r'snowflake-arctic-embed:33m'
         self.pdf_path = r'xyz.pdf'
         
         self.num_tokens = 1024
@@ -163,15 +162,15 @@ class MapReduceSummarizer:
         except Exception as e:
             print(f'Failed to save markdown file: {e}')
             
-if __name__ == '__main__':
-    config = Config()
-    pdfreader = PDFReaderPipe()
-    summarizer = MapReduceSummarizer()
+# if __name__ == '__main__':
+#     config = Config()
+#     pdfreader = PDFReaderPipe()
+#     summarizer = MapReduceSummarizer()
     
-    text = pdfreader.read_pdf(config.pdf_path)
-    summary = summarizer.summarize(text[:20000], config)
-    summarizer.save_summary_as_markdown(
-        summary,
-        'Financial Summary',
-        'temp/summary_temp.md',
-    )
+#     text = pdfreader.read_pdf(config.pdf_path)
+#     summary = summarizer.summarize(text[:20000], config)
+#     summarizer.save_summary_as_markdown(
+#         summary,
+#         'Financial Summary',
+#         'temp/summary_temp.md',
+#     )
