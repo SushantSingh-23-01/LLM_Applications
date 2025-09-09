@@ -12,7 +12,7 @@ All the applications invovle detailed debugging information displayed in termina
 
 Implements Map Reduce Summarization Technique. 
 
-Steps: 
+**Steps**: 
 - **Map Step**: Large Text is splitted into small text which fits within context window of LLM and then further summarized by it.
 - **Reduce Step**: Collect summaries of chunks from map step and refine them into a single summary using LLM.
 
@@ -24,4 +24,4 @@ Steps:
 - *Top_P*: 0.5 - 0.9
 - *num_ctx*: Whatever GPU supports.
 - *num_token*: As large as possible which allows chunks to fit within context window. 
-- *num_ctx, num_tokens, tokens_overlap*: Tune them to minimize the number of chunks. For each chunk a LLM call is made
+- *num_ctx, num_tokens, tokens_overlap*: Tune them to minimize the number of chunks. Remember each chunk a LLM call is made.
