@@ -12,9 +12,7 @@ All the applications invovle detailed debugging information displayed in termina
 - Parent chunk ingestion is an advanced strategy for handling documents that creates a **hierarchical relationship between chunks of different sizes**.
 - This method aims to resolve the tension between having chunks that are **small enough** for **precise embedding** and **large enough** to retain the **necessary context**.
 
-<img src="[https://github.com/SushantSingh-23-01/LLM_Applications/blob/7b0f9d929f26910514e205e8fe16c80bbbff5b22/assets/Parent_child_ingestion.png](https://github.com/SushantSingh-23-01/LLM_Applications/blob/7b0f9d929f26910514e205e8fe16c80bbbff5b22/assets/Parent_child_ingestion.png)" alt="Alt text" width="400">
-
-![Parent Child Ingestion.png](https://github.com/SushantSingh-23-01/LLM_Applications/blob/7b0f9d929f26910514e205e8fe16c80bbbff5b22/assets/Parent_child_ingestion.png)
+<img src="https://github.com/SushantSingh-23-01/LLM_Applications/raw/main/assets/Parent_child_ingestion.png?raw=true" alt="Alt text" width="600">
 
 ### Document Summarization
 
