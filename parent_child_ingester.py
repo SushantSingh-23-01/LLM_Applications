@@ -26,6 +26,7 @@ class ParentChildIngester:
             client = chromadb.Client(settings = Settings(anonymized_telemetry=False))
             
         self.chroma_collection = client.get_or_create_collection('docs')
+        self.intial_chromadb_count = self.chroma_collection.count()
         
         # Parent Chunks Store
         self.parent_doc_store = {}
@@ -135,7 +136,7 @@ class ParentChildIngester:
         print(
             f'\nChild number of tokens:         {num_tokens[1]}'
             f'\nChild tokens overlap:           {token_overlap[1]}'
-            f'\nChild Chunks Count:             {self.chroma_collection.count()}'
+            f'\nChild Chunks Count:             {self.chroma_collection.count() - self.intial_chromadb_count}'
             f'\nChild Ingestion Time:           {children_ingest_time:.2f}s'
         )
         
