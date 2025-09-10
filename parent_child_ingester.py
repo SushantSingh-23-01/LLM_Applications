@@ -112,7 +112,9 @@ class ParentChildIngester:
         token_overlap: tuple = (32, 16),
         n_results: int = 3
         ):
-
+        """
+            Can be used for debugging the pipeline or tuning parameters.
+        """
         print('='*50 + f'\n{'':<20}DEBUGGING\n' + '='*50)
         
         start = time.time()
