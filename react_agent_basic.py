@@ -1,12 +1,3 @@
-from typing import Any, List
-import re
-import json
-import ollama
-from ddgs import DDGS
-import colorama
-from colorama import Style, Fore
-colorama.init(autoreset=True)
-
 class Config:
     def __init__(self) -> None:
         self.model_name = 'qwen3:1.7b'
@@ -165,12 +156,13 @@ class SimpleReactAgent:
                             # The user message for the next step becomes the tool's output
                             user_msg = f'Observtion: {tool_result}'
                         except Exception as e:
-                            print(f'Error: Tool execution failed: {e}')
+                            print(f'{Fore.RED}Error: Tool execution failed: {e}{Style.RESET_ALL}')
                 else:
                     print(f"{Fore.RED}ERROR: Tool '{tool_name}' not found.{Style.RESET_ALL}")
                     return f"Error: Tool '{tool_name}' not found."
             else:
-                print("Agent did not specify a tool or a final answer.")
+                print(f"{Fore.RED}Agent did not specify a tool or a final answer.{Style.RESET_ALL}")
                 return "Error: Agent could not decide on a tool or final answer."
-        
-        return "Maximum number of steps reached without a final answer."
+            
+        print(f"{Fore.RED}Maximum number of steps reached without a final answer.{Style.RESET_ALL}")
+        return "Maximum number of steps reached without a final answer"
