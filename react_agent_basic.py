@@ -174,8 +174,3 @@ class SimpleReactAgent:
                 return "Error: Agent could not decide on a tool or final answer."
         
         return "Maximum number of steps reached without a final answer."
-                               
-config = Config()            
-tools = [DateTimeTool(), WebSearchTool(), CalculatorTool()]
-agent = SimpleReactAgent()
-agent.run('Who is 512x640?', tools, config, 2)
